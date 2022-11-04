@@ -1,0 +1,316 @@
+<html>
+
+<head>
+    <title>Form</title>
+    <style>
+        html,
+body {
+    /* background: #a9d7d1; */
+    /* background: #f9f9f9; */
+    text-align: center;
+    font-family: 'Raleway', Helvetica, sans-serif;
+    min-width: 320px;
+}
+
+#main-form {
+    background: rgb(250, 250, 250);
+    margin: 0 auto;
+    border-radius: 4px;
+    width: 75%;
+    max-width: 900px;
+    padding: 10px;
+    padding-top: 20px;
+}
+
+.labels {
+    display: inline-block;
+    text-align: right;
+    width: 40%;
+    padding: 5px;
+    vertical-align: top;
+    margin-top: 10px;
+}
+
+.rightTab {
+    display: inline-block;
+    text-align: left;
+    width: 48%;
+    vertical-align: middle;
+}
+
+.input-field {
+    height: 20px;
+    width: 280px;
+    padding: 5px;
+    margin: 10px;
+    border: 1px solid #c0c0c0;
+    border-radius: 2px;
+}
+
+#userAge {
+    width: 40px;
+}
+
+.userRatings,
+input[type="checkbox"] {
+    float: left;
+    margin-right: 5px;
+}
+
+#submit {
+    /* background-color: #59ace0; */
+    background: #a5c422;
+    border-radius: 4px;
+    color: white;
+    font-size: 1em;
+    height: 40px;
+    width: 96px;
+    margin: 10px;
+    border: 0px solid;
+}
+
+#submit:hover {
+    cursor: pointer;
+    /* background: green; */
+    background-color: #59ace0;
+}
+
+.dropdown {
+    height: 35px;
+    width: 140px;
+    padding: 5px;
+    margin: 10px;
+    margin-top: 15px;
+    border: 1px solid #c0c0c0;
+    border-radius: 2px;
+}
+
+.radio,
+.checkbox {
+    position: relative;
+    left: -43px;
+    margin-left: 10px;
+    display: block;
+    padding-bottom: 10px;
+}
+
+
+/*-------------Tablet View (For Responsive Design)--------------*/
+
+@media screen and (max-width: 833px) {
+    .input-field {
+        width: 80%;
+    }
+    select {
+        width: 90%;
+    }
+    h2 {
+        background: tomato;
+        padding: 5px;
+    }
+}
+
+
+/*-------------Mobile View (For Responsive Design)--------------*/
+
+@media screen and (max-width: 520px) {
+    .labels {
+        width: 100%;
+        text-align: left;
+    }
+    .rightTab {
+        width: 80%;
+        float: left;
+    }
+    .input-field {
+        width: 100%;
+    }
+    select {
+        width: 100%;
+    }
+    h2 {
+        font-size: 15px;
+        padding: 2px;
+    }
+}
+    </style>
+</head>
+
+<body>
+    <!-----------------------------------Form-heading--------------------------------->
+    <h1 id="title">Prediction Form</h1>
+    <!-----------------------------------Form-section--------------------------------->
+    <div id="main-form">
+        <p id="description">Provide us the details and we will give you the result!!</p>
+        <form id="survey-form" method="POST" action="{{ url_for('predict') }}">
+            <div class="rowTab">
+                <div class="labels">
+                    <label id="number-label" for="smoothness_mean">Smoothness Mean</label>
+                </div>
+                <div class="rightTab">
+                    <input type="text" name="smoothness_mean" id="number" class="input-field" placeholder="">
+                </div>
+            </div>
+            <div class="rowTab">
+                <div class="labels">
+                    <label id="number-label" for="compactness_mean">Compactness Mean</label>
+                </div>
+                <div class="rightTab">
+                    <input type="text" name="compactness_mean" id="number" class="input-field" placeholder="">
+                </div>
+            </div>
+            <div class="rowTab">
+                <div class="labels">
+                    <label id="number-label" for="symmetry_mean">Symmetry Mean</label>
+                </div>
+                <div class="rightTab">
+                    <input type="text" name="symmetry_mean" id="number" min="0" max="1125" class="input-field" placeholder="">
+                </div>
+            </div>
+            <div class="rowTab">
+                <div class="labels">
+                    <label id="number-label" for="fractal_dimension_mean">Fractal Dimension Mean</label>
+                </div>
+                <div class="rightTab">
+                    <input type="text" name="fractal_dimension_mean" id="number" min="0" max="1125" class="input-field" placeholder="">
+                </div>
+            </div>
+            <div class="rowTab">
+                <div class="labels">
+                    <label id="number-label" for="texture_se">Texture Standard Error</label>
+                </div>
+                <div class="rightTab">
+                    <input type="text" name="texture_se" id="number" min="0" max="1125" class="input-field" placeholder="">
+                </div>
+            </div>
+            <div class="rowTab">
+                <div class="labels">
+                    <label id="number-label" for="area_se">Area Standard Error</label>
+                </div>
+                <div class="rightTab">
+                    <input type="text" name="area_se" id="number" class="input-field" placeholder="">
+                </div>
+            </div>
+            <div class="rowTab">
+                <div class="labels">
+                    <label id="number-label" for="smoothness_se">Smoothness Standard Error </label>
+                </div>
+                <div class="rightTab">
+                    <input autofocus type="text" name="smoothness_se" id="number" class="input-field" placeholder="" required>
+                </div>
+            </div>
+            <div class="rowTab">
+                <div class="labels">
+                    <label id="number-label" for="compactness_se">Compactness Standard Error </label>
+                </div>
+                <div class="rightTab">
+                    <input autofocus type="text" name="compactness_se" id="number" class="input-field" placeholder="" required>
+                </div>
+            </div>
+            <div class="rowTab">
+                <div class="labels">
+                    <label id="number-label" for="concavity_se">Concavity Standard Error </label>
+                </div>
+                <div class="rightTab">
+                    <input autofocus type="texture" name="concavity_se" id="number" class="input-field" placeholder="" required>
+                </div>
+            </div>
+            <div class="rowTab">
+                <div class="labels">
+                    <label id="number-label" for="concave_points_se">Concave Points Standard Error </label>
+                </div>
+                <div class="rightTab">
+                    <input autofocus type="text" name="concave_points_se" id="number" class="input-field" placeholder="" required>
+                </div>
+            </div>
+            <div class="rowTab">
+                <div class="labels">
+                    <label id="number-label" for="symmetry_se">Symmetry Standard Error </label>
+                </div>
+                <div class="rightTab">
+                    <input autofocus type="text" name="symmetry_se" id="number" class="input-field" placeholder="" required>
+                </div>
+            </div>
+            <div class="rowTab">
+                <div class="labels">
+                    <label id="number-label" for="fractal_dimension_se">Fractal Dimension Standard Error </label>
+                </div>
+                <div class="rightTab">
+                    <input autofocus type="text" name="fractal_dimension_se" id="number" class="input-field" placeholder="" required>
+                </div>
+            </div>
+            <div class="rowTab">
+                <div class="labels">
+                    <label id="number-label" for="texture_worst">Texture Worst </label>
+                </div>
+                <div class="rightTab">
+                    <input autofocus type="text" name="texture_worst" id="number" class="input-field" placeholder="" required>
+                </div>
+            </div>
+            <div class="rowTab">
+                <div class="labels">
+                    <label id="number-label" for="area_worst">Area Worst </label>
+                </div>
+                <div class="rightTab">
+                    <input type="text" name="area_worst" id="number" class="input-field" required placeholder="">
+                </div>
+            </div>
+            <div class="rowTab">
+                <div class="labels">
+                    <label id="number-label" for="smoothness_worst">Smoothness Worst</label>
+                </div>
+                <div class="rightTab">
+                    <input type="text" name="smoothness_worst" id="number" class="input-field" required placeholder="">
+                </div>
+            </div>
+            <div class="rowTab">
+                <div class="labels">
+                    <label id="number-label" for="compactness_worst">Compactness Worst </label>
+                </div>
+                <div class="rightTab">
+                    <input type="text" name="compactness_worst" id="number" class="input-field" required placeholder="">
+                </div>
+            </div>
+            <div class="rowTab">
+                <div class="labels">
+                    <label id="number-label" for="concavity_worst">Concavity Worst </label>
+                </div>
+                <div class="rightTab">
+                    <input type="text" name="concavity_worst" id="number" class="input-field" required placeholder="">
+                </div>
+            </div>
+            <div class="rowTab">
+                <div class="labels">
+                    <label id="number-label" for="concave_points_worst">Concave Points Worst </label>
+                </div>
+                <div class="rightTab">
+                    <input type="text" name="concave_points_worst" id="number" class="input-field" required placeholder="">
+                </div>
+            </div>
+            <div class="rowTab">
+                <div class="labels">
+                    <label id="number-label" for="symmetry_worst">Symmetry Worst </label>
+                </div>
+                <div class="rightTab">
+                    <input type="text" name="symmetry_worst" id="number" class="input-field" required placeholder="">
+                </div>
+            </div>
+            <div class="rowTab">
+                <div class="labels">
+                    <label id="number-label" for="fractal_dimension_worst">Fractal Dimension Worst </label>
+                </div>
+                <div class="rightTab">
+                    <input type="text" name="fractal_dimension_worst" id="number" class="input-field" required placeholder="">
+                </div>
+            </div>
+           
+            
+            <button id="submit" type="submit">Predict</button>
+        </form>
+    </div>
+    <h2>Health Lab</h2>
+
+    <script href="/index.js"></script>
+</body>
+
+</html>

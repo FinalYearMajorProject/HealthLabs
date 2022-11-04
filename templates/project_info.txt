@@ -1,0 +1,38 @@
+Accuracy :
+Breast cancer - 97
+Diabetes - 92
+Heart - 85
+Kidney - 98
+Liver - 72
+Insurance cost - 85
+
+Inputs :
+Breast cancer - Texture Mean, Smoothness Mean, compactness mean, concave points mean,
+symmetry mean, fractal dimension mean, texture standard error, area standard error, smoothness standard error,
+compactness standard error, concavity standard error, concave points standard error, symmetry standard error, fractal dimension
+standard error, texture worst, area worst, smoothness worst, compactness worst, concavity worst, concave points worst,
+symmetry worst, fractal dimension worst
+
+Diabetes :
+No of Pregnancies, Glucose, Blood Pressure (in mmHg), Skin thickness (in mm), Insulin (in µU/ml), BMI, Diabetes Pedigree Function, Age
+
+Heart disease:
+Age (in years), Gender(1=Male, 0=Female), Chest pain type, resting blood pressure (in mm Hg), Serum cholestrol(in mg/dl), Fasting Blood Sugar > 120 mg/dl (1 = True; 0 = False)",
+Resting Electrocardiograph Results, Maximum Heart Rate achieved, Exercise Induced Angina (1 = Yes; 0 = No), ST Depression Induced by Exercise Relative to Rest, The Slope of the Peak Exercise ST Segment, Number of Major Vessels (0-3) Colored by Fluoroscopy,
+Thal: 1 = Normal; 2 = Fixed Defect; 3 = Reversible Defect
+
+Kidney disease :
+Age (in years), blood pressure(in mm/Hg), specific gravity, albumin(0,1,2,3,4,5), sugar(0,1,2,3,4,5),
+       red blood cells (0:abnormal,1:normal), pus cell(0:abnormal 1:normal), pus cell clumps(0:Not present 1:present), bacteria(0:Not present 1:present),
+       blood glucose random(in mgs/dl)', blood urea(in mgs/dl), serum creatinine(in mgs/dl), sodium(in mEq/L),
+       potassium(in mEq/L), haemoglobin (in gms), packed cell volume,
+       white blood cell count(in cells/cumm), red blood cell count(in millions/cmm), hypertension(0:No 1:Yes),
+       diabetes mellitus(0:No, 1:Yes), coronary artery disease(0:No, 1:Yes), appetite(0:Good 1:Poor),
+       pedal edema(0:No 1:Yes), anemia(0:No 1:Yes)
+
+Liver disease:
+Age(in years), Gender(0:Male,1:female),	Total Bilirubin(in mg/dL),Conjugated Bilirubin(in mg/dL),Alkaline Phosphotase(in IU/L),	Alamine Aminotransferase(in IU/L),Aspartate_Aminotransferase(in IU/L),Total Proteins(in g/dL),Albumin(in g/dL),
+	Albumin and Globulin Ratio
+
+Medical Insurance:
+Age(in years), BMI, children(0,1,2,3,4,5), Smoker(0:No,1:yes), Gender(0:male,1:female), region(0:northeast,1:northwest,2:southeast,3:southwest,)

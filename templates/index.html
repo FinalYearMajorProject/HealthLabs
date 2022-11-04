@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+     <title>Health Lab</title>
+
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+     <meta name="description" content="">
+     <meta name="keywords" content="">
+     <meta name="author" content="Tooplate">
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+     <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+     <link rel="stylesheet" href="../static/css/font-awesome.min.css">
+     <link rel="stylesheet" href="../static/css/animate.css">
+     <link rel="stylesheet" href="../static/css/owl.carousel.css">
+     <link rel="stylesheet" href="../static/css/owl.theme.default.min.css">
+
+     <!-- MAIN CSS -->
+     <link rel="stylesheet" href="../static/css/tooplate-style.css">
+
+</head>
+<body id="top" data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
+
+     <!-- PRE LOADER -->
+     <section class="preloader">
+          <div class="spinner">
+
+               <span class="spinner-rotate"></span>
+               
+          </div>
+     </section>
+
+
+     <!-- MENU -->
+     <section class="navbar navbar-default navbar-static-top" role="navigation">
+          <div class="container">
+
+               <div class="navbar-header">
+                    <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                         <span class="icon icon-bar"></span>
+                         <span class="icon icon-bar"></span>
+                         <span class="icon icon-bar"></span>
+                    </button>
+
+                    <!-- lOGO TEXT HERE -->
+                    <a href="index.html" class="navbar-brand"><i class="fa fa-h-square"></i>ealth Lab</a>
+               </div>
+
+               <!-- MENU LINKS -->
+               <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                         <li><a href="#top" class="smoothScroll">Home</a></li>
+                         <li><a href="#about" class="smoothScroll">About Us</a></li>
+                         <li><a href="#news" class="smoothScroll">Predictions</a></li>
+                         <li><a href="#footer" class="smoothScroll">Footer (Project Group)</a></li>
+                         <!-- <li class="appointment-btn"><a href="#appointment">Make an appointment</a></li> -->
+                    </ul>
+               </div>
+
+          </div>
+     </section>
+
+
+     <!-- HOME -->
+     <section id="home" class="slider" data-stellar-background-ratio="0.5">
+          <div class="container">
+               <div class="row">
+
+                         <div class="owl-carousel owl-theme">
+                              <div class="item item-first">
+                                   <div class="caption">
+                                        <div class="col-md-offset-1 col-md-10">
+                                             <h3>Smart way to maintain health and happiness</h3>
+                                             <h1>Healthy Living</h1>
+                                             <a href="#news" class="section-btn btn btn-default smoothScroll">Predict Your Health</a>
+                                        </div>
+                                   </div>
+                              </div>
+
+                              <div class="item item-second">
+                                   <div class="caption">
+                                        <div class="col-md-offset-1 col-md-10">
+                                             <h3>Become aware of your body</h3>
+                                             <h1>Aging Healthy</h1>
+                                             <a href="#about" class="section-btn btn btn-default btn-gray smoothScroll">More About The Website</a>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+
+               </div>
+          </div>
+     </section>
+
+
+     <!-- ABOUT -->
+     <section id="about">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-6 col-sm-6">
+                         <div class="about-info">
+                              <h2 class="wow fadeInUp" data-wow-delay="0.6s">Welcome to Your <i class="fa fa-h-square"></i>ealth Detection Center</h2>
+                              <div class="wow fadeInUp" data-wow-delay="0.8s">
+                                   <p>Health Lab is one stop destination for crucial medical check ups. The users can enter their medical details and our machine learning model will predict the likeability of the disease based on the information provided. </p>
+                                   <p>This website will enable health labs and individuals to speculate the chances of an individual having a chronic disease. Users only need to answer some questions to get an idea whether they have a disease or not.</p>
+                              </div>
+                              <figure class="profile wow fadeInUp" data-wow-delay="1s">
+                                   <img src="../static/images/author-image.jpg" class="img-responsive" alt="">
+                                   <figcaption>
+                                        <h3>High Accuracy Rate</h3>
+                                        <p>Zero Pain, Zero Cost</p>
+                                   </figcaption>
+                              </figure>
+                         </div>
+                    </div>
+                    
+               </div>
+          </div>
+     </section>
+
+
+   
+     <section id="news" data-stellar-background-ratio="2.5">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-12 col-sm-12">
+                         <!-- SECTION TITLE -->
+                         <div class="section-title wow fadeInUp" data-wow-delay="0.1s">
+                              <h2>Disease Predictions</h2>
+                         </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6">
+                         <div class="news-thumb wow fadeInUp" data-wow-delay="0.4s">
+                              <a href="breast_cancer.html">
+                                   <img src="../static/images/news-image1.jpg" class="img-responsive" alt="">
+                              </a>
+                              <div class="news-info">
+                                   <span>2.3 million women diagnosed with breast cancer in 2020</span>
+                                   <h3><a href="{{ url_for('cancer') }}">Breast Cancer Detection</a></h3>
+                                   <p>The form has certain mean, error and worst inputs which helps the model to give a highly efficient prediction.</p>
+                                   <div class="author">
+                                        <img src="../static/images/author-image.jpg" class="img-responsive" alt="">
+                                        <div class="author-info">
+                                             <h5>Model Accuracy</h5>
+                                             <p>97%</p>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+                    
+                    <div class="col-md-4 col-sm-6">
+                         <div class="news-thumb wow fadeInUp" data-wow-delay="0.6s">
+                              <a href="heart.html">
+                                   <img src="../static/images/news-image2.jpg" class="img-responsive" alt="">
+                              </a>
+                              <div class="news-info">
+                                   <span>20.1 million adults age 20 and older have CAD</span>
+                                   <h3><a href="{{ url_for('heart') }}">Heart Disease Detection</a></h3>
+                                   <p>Users need to answer some numeric questions about their health condition to know if they suffer from a heart disease.</p>
+                                   <div class="author">
+                                        <img src="../static/images/author-image.jpg" class="img-responsive" alt="">
+                                        <div class="author-info">
+                                             <h5>Model Accuracy</h5>
+                                             <p>85%</p>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6">
+                         <div class="news-thumb wow fadeInUp" data-wow-delay="0.8s">
+                              <a href="liver.html">
+                                   <img src="../static/images/news-image3.jpg" class="img-responsive" alt="">
+                              </a>
+                              <div class="news-info">
+                                   <span>Hepatitis B is the most common contagious liver disease in the world</span>
+                                   <h3><a href="{{ url_for('liver') }}">Liver Disease Detection</a></h3>
+                                   <p>Only a set of 10 questions will determine whether the person has chronic liver illness or not. </p>
+                                   <div class="author">
+                                        <img src="../static/images/author-image.jpg" class="img-responsive" alt="">
+                                        <div class="author-info">
+                                             <h5>Model Accuracy</h5>
+                                             <p>72%</p>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+
+               </div>
+                <div class="row">
+
+                    <div class="col-md-4 col-sm-6">
+                         <div class="news-thumb wow fadeInUp" data-wow-delay="0.4s">
+                              <a href="medical_cost.html">
+                                   <img src="../static/images/news-image4.jpg" class="img-responsive" alt="">
+                              </a>
+                              <div class="news-info">
+                                   <span>Only 37% of indian population is covered under health insurance</span>
+                                   <h3><a href="{{ url_for('insurance') }}">Medical Insurance Cost Prediction</a></h3>
+                                   <p>Users need to answer some basic questions to know how much their medical insurance will cost.</p>
+                                   <div class="author">
+                                        <img src="../static/images/author-image.jpg" class="img-responsive" alt="">
+                                        <div class="author-info">
+                                             <h5>Model Accuracy</h5>
+                                             <p>85%</p>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6">
+                         <div class="news-thumb wow fadeInUp" data-wow-delay="0.6s">
+                              <a href="kidney.html">
+                                   <img src="../static/images/news-image5.jpg" class="img-responsive" alt="">
+                              </a>
+                              <div class="news-info">
+                                   <span>10% of the population worldwide is affected by chronic kidney disease</span>
+                                   <h3><a href="{{ url_for('kidney') }}">Chronic Kidney Disease Detection</a></h3>
+                                   <p>If test reports define these set of questions then highly accurate results can be generated.</p>
+                                   <div class="author">
+                                        <img src="../static/images/author-image.jpg" class="img-responsive" alt="">
+                                        <div class="author-info">
+                                             <h5>Model Accuracy</h5>
+                                             <p>98%</p>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6">
+                         <div class="news-thumb wow fadeInUp" data-wow-delay="0.8s">
+                              <a href="parkinson.html">
+                                   <img src="../static/images/news-image6.jpg" class="img-responsive" alt="">
+                              </a>
+                              <div class="news-info">
+                                   <span>Parkinson's disease affects 1-2 per 1000 of the population at any time</span>
+                                   <h3><a href="{{ url_for('parkinson') }}">Parkinson's Disease Detection</a></h3>
+                                   <p> Parkinson's disease is an age-related degenerative brain condition, meaning it causes parts of your brain to deteriorate.</p>
+                                   <div class="author">
+                                        <img src="../static/images/author-image.jpg" class="img-responsive" alt="">
+                                        <div class="author-info">
+                                             <h5>Model Accuracy</h5>
+                                             <p>93%</p>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+
+               </div>
+               <div class="row">
+
+                    <div class="col-md-4 col-sm-6">
+                         <div class="news-thumb wow fadeInUp" data-wow-delay="0.4s">
+                              <a href="diabetes.html">
+                                   <img src="../static/images/temp2.jpg" class="img-responsive" alt="">
+                              </a>
+                              <div class="news-info">
+                                   <span>About 422 million people worldwide are diabetic</span>
+                                   <h3><a href="{{ url_for('diabetes') }}">Diabetes Detection</a></h3>
+                                   <p>The model will predict the chances of a person suffering form diabetes if he/she answers the questions asked.</p>
+                                   <div class="author">
+                                        <img src="../static/images/author-image.jpg" class="img-responsive" alt="">
+                                        <div class="author-info">
+                                             <h5>Model Accuracy</h5>
+                                             <p>92%</p>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+          </div>
+     </section>
+
+     <!-- FOOTER -->
+     <footer data-stellar-background-ratio="5" id="footer">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-12 col-sm-12 border-top">
+                         <div class="col-md-4 col-sm-6">
+                              <div class="copyright-text"> 
+                                   <p>Copyright &copy; 2022 Health Lab 
+                                   
+                                   | Tech Stack: HTML, CSS, JS, Python, Flask, Jupyter</p>
+                              </div>
+                         </div>
+                         <div class="col-md-6 col-sm-6">
+                              <div class="footer-link"> 
+                                   <p>Made by:</p>
+                                   <p>1905159</p>
+                                   <p>1905213</p>
+                                   <p>1905215</p>
+                                   <p>1905218</p>
+                              </div>
+                         </div>
+                         <div class="col-md-2 col-sm-2 text-align-center">
+                              <div class="angle-up-btn"> 
+                                  <a href="#top" class="smoothScroll wow fadeInUp" data-wow-delay="1.2s"><i class="fa fa-angle-up"></i></a>
+                              </div>
+                         </div>   
+                    </div>
+                    
+               </div>
+          </div>
+     </footer>
+
+     <!-- SCRIPTS -->
+     <script src="../static/js/jquery.js"></script>
+     <script src="../static/js/bootstrap.min.js"></script>
+     <script src="../static/js/jquery.sticky.js"></script>
+     <script src="../static/js/jquery.stellar.min.js"></script>
+     <script src="../static/js/wow.min.js"></script>
+     <script src="../static/js/smoothscroll.js"></script>
+     <script src="../static/js/owl.carousel.min.js"></script>
+     <script src="../static/js/custom.js"></script>
+
+</body>
+</html>

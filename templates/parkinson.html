@@ -1,0 +1,333 @@
+<html>
+
+<head>
+    <title>Form</title>
+    <style>
+        html,
+body {
+    /* background: #a9d7d1; */
+    /* background: #f9f9f9; */
+    text-align: center;
+    font-family: 'Raleway', Helvetica, sans-serif;
+    min-width: 320px;
+}
+
+#main-form {
+    background: rgb(250, 250, 250);
+    margin: 0 auto;
+    border-radius: 4px;
+    width: 75%;
+    max-width: 900px;
+    padding: 10px;
+    padding-top: 20px;
+}
+
+.labels {
+    display: inline-block;
+    text-align: right;
+    width: 40%;
+    padding: 5px;
+    vertical-align: top;
+    margin-top: 10px;
+}
+
+.rightTab {
+    display: inline-block;
+    text-align: left;
+    width: 48%;
+    vertical-align: middle;
+}
+
+.input-field {
+    height: 20px;
+    width: 280px;
+    padding: 5px;
+    margin: 10px;
+    border: 1px solid #c0c0c0;
+    border-radius: 2px;
+}
+
+#userAge {
+    width: 40px;
+}
+
+.userRatings,
+input[type="checkbox"] {
+    float: left;
+    margin-right: 5px;
+}
+
+#submit {
+    /* background-color: #59ace0; */
+    background: #a5c422;
+    border-radius: 4px;
+    color: white;
+    font-size: 1em;
+    height: 40px;
+    width: 96px;
+    margin: 10px;
+    border: 0px solid;
+}
+
+#submit:hover {
+    cursor: pointer;
+    /* background: green; */
+    background-color: #59ace0;
+}
+
+.dropdown {
+    height: 35px;
+    width: 140px;
+    padding: 5px;
+    margin: 10px;
+    margin-top: 15px;
+    border: 1px solid #c0c0c0;
+    border-radius: 2px;
+}
+
+.radio,
+.checkbox {
+    position: relative;
+    left: -43px;
+    margin-left: 10px;
+    display: block;
+    padding-bottom: 10px;
+}
+
+
+/*-------------Tablet View (For Responsive Design)--------------*/
+
+@media screen and (max-width: 833px) {
+    .input-field {
+        width: 80%;
+    }
+    select {
+        width: 90%;
+    }
+    h2 {
+        background: tomato;
+        padding: 5px;
+    }
+}
+
+
+/*-------------Mobile View (For Responsive Design)--------------*/
+
+@media screen and (max-width: 520px) {
+    .labels {
+        width: 100%;
+        text-align: left;
+    }
+    .rightTab {
+        width: 80%;
+        float: left;
+    }
+    .input-field {
+        width: 100%;
+    }
+    select {
+        width: 100%;
+    }
+    h2 {
+        font-size: 15px;
+        padding: 2px;
+    }
+}
+    </style>
+</head>
+
+<body>
+    <!-----------------------------------Form-heading--------------------------------->
+    <h1 id="title">Prediction Form</h1>
+    <!-----------------------------------Form-section--------------------------------->
+    <div id="main-form">
+        <p id="description">Provide us the details and we will give you the result!!</p>
+        <form id="survey-form" method="POST" action="{{ url_for('predict') }}">
+            <div class="rowTab">
+                <div class="labels">
+                    <label id="number-label" for="MDVP_Fo_Hz">Average vocal fundamental frequency</label>
+                </div>
+                <div class="rightTab">
+                    <input type="text" name="MDVP_Fo_Hz" id="number" class="input-field" placeholder="Hz">
+                </div>
+            </div>
+            <div class="rowTab">
+                <div class="labels">
+                    <label id="number-label" for="MDVP_Fhi_Hz">Maximum vocal fundamental frequency</label>
+                </div>
+                <div class="rightTab">
+                    <input type="text" name="MDVP_Fhi_Hz" id="number" class="input-field" placeholder="Hz">
+                </div>
+            </div>
+            <div class="rowTab">
+                <div class="labels">
+                    <label id="number-label" for="MDVP_Flo_Hz">Minimum vocal fundamental frequency</label>
+                </div>
+                <div class="rightTab">
+                    <input autofocus type="text" name="MDVP_Flo_Hz" id="number" class="input-field" placeholder="Hz" required>
+                </div>
+            </div>
+            <div class="rowTab">
+                <div class="labels">
+                    <label id="number-label" for="MDVP_Jitter_Percent">Variation in fundamental frequency MDVP:Jitter(%)</label>
+                </div>
+                <div class="rightTab">
+                    <input type="text" name="MDVP_Jitter_Percent" id="number" class="input-field" placeholder="">
+                </div>
+            </div>
+            <div class="rowTab">
+                <div class="labels">
+                    <label id="number-label" for="MDVP_Jitter_Abs">Variation in fundamental frequency MDVP:Jitter(Abs)</label>
+                </div>
+                <div class="rightTab">
+                    <input type="text" name="MDVP_Jitter_Abs" id="number" class="input-field" placeholder="">
+                </div>
+            </div>
+            <div class="rowTab">
+                <div class="labels">
+                    <label id="number-label" for="MDVP_RAP">Variation in fundamental frequency MDVP:RAP</label>
+                </div>
+                <div class="rightTab">
+                    <input type="text" name="MDVP_RAP" id="number" class="input-field" placeholder="">
+                </div>
+            </div>
+            <div class="rowTab">
+                <div class="labels">
+                    <label id="number-label" for="MDVP_PPQ">Variation in fundamental frequency MDVP:PPQ</label>
+                </div>
+                <div class="rightTab">
+                    <input type="text" name="MDVP_PPQ" id="number" class="input-field" placeholder="">
+                </div>
+            </div>
+            
+            <div class="rowTab">
+                <div class="labels">
+                    <label id="number-label" for="Jitter_DDP">Variation in fundamental frequency Jitter:DDP </label>
+                </div>
+                <div class="rightTab">
+                    <input autofocus type="text" name="Jitter_DDP" id="number" class="input-field" placeholder="" required>
+                </div>
+            </div>
+            <div class="rowTab">
+                <div class="labels">
+                    <label id="number-label" for="MDVP_Shimmer">Variation in amplitude MDVP:Shimmer </label>
+                </div>
+                <div class="rightTab">
+                    <input autofocus type="text" name="MDVP_Shimmer" id="number" class="input-field" placeholder="" required>
+                </div>
+            </div>
+            <div class="rowTab">
+                <div class="labels">
+                    <label id="number-label" for="MDVP_Shimmer_dB">Variation in amplitude MDVP:Shimmer(dB) </label>
+                </div>
+                <div class="rightTab">
+                    <input autofocus type="text" name="MDVP_Shimmer_dB" id="number" class="input-field" placeholder="" required>
+                </div>
+            </div>
+            <div class="rowTab">
+                <div class="labels">
+                    <label id="number-label" for="Shimmer_APQ3">Variation in amplitude Shimmer:APQ3 </label>
+                </div>
+                <div class="rightTab">
+                    <input autofocus type="text" name="Shimmer_APQ3" id="number" class="input-field" placeholder="" required>
+                </div>
+            </div>
+            <div class="rowTab">
+                <div class="labels">
+                    <label id="number-label" for="Shimmer_APQ5">Variation in amplitude Shimmer:APQ5 </label>
+                </div>
+                <div class="rightTab">
+                    <input autofocus type="text" name="Shimmer_APQ5" id="number" class="input-field" placeholder="" required>
+                </div>
+            </div>
+            <div class="rowTab">
+                <div class="labels">
+                    <label id="number-label" for="MDVP_APQ">Variation in amplitude MDVP:APQ </label>
+                </div>
+                <div class="rightTab">
+                    <input autofocus type="text" name="MDVP_APQ" id="number" class="input-field" placeholder="" required>
+                </div>
+            </div>
+            <div class="rowTab">
+                <div class="labels">
+                    <label id="number-label" for="Shimmer_DDA">Variation in amplitude Shimmer:DDA </label>
+                </div>
+                <div class="rightTab">
+                    <input autofocus type="text" name="Shimmer_DDA" id="number" class="input-field" placeholder="" required>
+                </div>
+            </div>
+            <div class="rowTab">
+                <div class="labels">
+                    <label id="number-label" for="NHR">NHR </label>
+                </div>
+                <div class="rightTab">
+                    <input autofocus type="text" name="NHR" id="number" class="input-field" placeholder="Ratio of noise to tonal components in the voice" required>
+                </div>
+            </div>
+            <div class="rowTab">
+                <div class="labels">
+                    <label id="number-label" for="HNR">HNR </label>
+                </div>
+                <div class="rightTab">
+                    <input autofocus type="text" name="HNR" id="number" class="input-field" placeholder="Ratio of noise to tonal components in the voice" required>
+                </div>
+            </div>
+            <div class="rowTab">
+                <div class="labels">
+                    <label id="number-label" for="RPDE">RPDE </label>
+                </div>
+                <div class="rightTab">
+                    <input autofocus type="text" name="RPDE" id="number" class="input-field" placeholder="Nonlinear dynamical complexity measures" required>
+                </div>
+            </div>
+            <div class="rowTab">
+                <div class="labels">
+                    <label id="number-label" for="DFA">Signal fractal scaling exponent </label>
+                </div>
+                <div class="rightTab">
+                    <input autofocus type="text" name="DFA" id="number" class="input-field" placeholder="DFA" required>
+                </div>
+            </div>
+            <div class="rowTab">
+                <div class="labels">
+                    <label id="number-label" for="spread1">Spread1 </label>
+                </div>
+                <div class="rightTab">
+                    <input autofocus type="text" name="spread1" id="number" class="input-field" placeholder="Nonlinear measure of fundamental frequency variation" required>
+                </div>
+            </div>
+            <div class="rowTab">
+                <div class="labels">
+                    <label id="number-label" for="spread2">Spread2 </label>
+                </div>
+                <div class="rightTab">
+                    <input autofocus type="text" name="spread2" id="number" class="input-field" placeholder="Nonlinear measure of fundamental frequency variation" required>
+                </div>
+            </div>
+            <div class="rowTab">
+                <div class="labels">
+                    <label id="number-label" for="D2">D2 </label>
+                </div>
+                <div class="rightTab">
+                    <input autofocus type="text" name="D2" id="number" class="input-field" placeholder="Nonlinear dynamical complexity measures" required>
+                </div>
+            </div>
+            <div class="rowTab">
+                <div class="labels">
+                    <label id="number-label" for="PPE">PPE - Nonlinear measure of fundamental frequency variation</label>
+                </div>
+                <div class="rightTab">
+                    <input autofocus type="text" name="PPE" id="number" class="input-field" placeholder="Nonlinear measure of fundamental frequency variation" required>
+                </div>
+            </div>
+           
+            
+            <button id="submit" type="submit">Predict</button>
+        </form>
+    </div>
+    <h2>Health Lab</h2>
+
+    <script href="/index.js"></script>
+</body>
+
+</html>
